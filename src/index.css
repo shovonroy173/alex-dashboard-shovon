@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-primary: #ff9500;
+  --color-brand-primary-soft: #fff3df;
+  --color-brand-secondary: #4f46e5;
+  --color-dashboard-bg: #ecf5ff;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+
+  button {
+    @apply rounded-lg transition-all duration-200;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply rounded-lg;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply outline-none ring-2;
+    --tw-ring-color: color-mix(in srgb, var(--color-brand-primary) 40%, white);
+  }
+}
+
+.subtract-width {
+  width: calc(100% - 18rem);
+}
+
+.auth-checkbox .ant-checkbox-inner {
+  background-color: transparent;
+  border-color: #ff9717;
+}
+
+.auth-checkbox.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.auth-checkbox .ant-checkbox:hover .ant-checkbox-inner,
+.auth-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  border-color: #ff9717;
+  background-color: transparent;
+}
+
+.auth-checkbox .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #ff9717;
+}
